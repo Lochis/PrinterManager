@@ -794,7 +794,9 @@ Do { # action
                     { #nonempty csv
                         # Search for driver in these paths
                         $inffilepaths=@()
-                        $inffilepaths+="$($scriptDir)\Drivers\$($Arch)\$($inffile)"
+                        #$inffilepaths+="$($scriptDir)\Drivers\$($Arch)\$($inffile)"
+                        $inffilepaths+="\\Sccmpr1\SCCMContentLib$\Sources\Software\PrinterManager\Drivers\$($Arch)\$($inffile)"
+
                         $inffilefound = $false
                         foreach ($inffilepath in $inffilepaths) {
                             If (Test-Path $inffilepath)
